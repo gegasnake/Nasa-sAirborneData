@@ -1,0 +1,46 @@
+{% extends 'delta_app/base.html' %}
+
+{% block content %}
+
+<div id="map"></div>
+
+
+<script>
+     var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+    var baseMaps = {
+        "OpenStreetMap": osm,
+    }
+    var springMarkers = L.layerGroup([])
+    var fallMarkers = L.layerGroup([])
+    var overlayMaps = {
+        'Spring': springMarkers,
+        'Fall': fallMarkers,
+    }
+
+    var map = L.map('map', {
+        center: [30.391830, -92.329102],
+        zoom: 7,
+        layers: [osm, springMarkers, fallMarkers]
+    });
+
+    var list = {{ data|safe }};
+    list.forEach(function(x) {
+        console.log(x)
+        let marker = L.marker([x.latitude, x.longitude]).addTo(map)
+
+        marker.bindPopup("<b>" +"salinity: " + x.salinity + "<br>turbidity: " + x.turbidity + "<br>temperature: " + x.temperature + "<br>time:" + x.time_str + "<br>date: " + x.date_str.slice(0,11) + "</b>")
+        if (x.month >= 3 & x.month <= 5){
+            marker.addTo(springMarkers)
+        }
+        else if (x.month >= 9 % x.month <=11){
+            marker.addTo(fallMarkers)
+        }
+    })
+
+    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+</script>
+{% endblock %}

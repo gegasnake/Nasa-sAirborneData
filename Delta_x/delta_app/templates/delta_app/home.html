@@ -1,0 +1,67 @@
+{% extends 'delta_app/base.html' %}
+
+{% load static %}
+
+
+    {% block navbar %}<a id="datalink" href="{% url 'datalist' %}">Data</a>{% endblock navbar %}
+    {% block content %}
+    <div class="descriptsection">
+        <h1 id="descript">Description</h1>
+        <section class="descsection">
+            <p>The Delta-X mission is a 5-year NASA Earth Venture Suborbital-3 mission to study the Mississippi
+                River Delta in the United States, which is growing and sinking in different areas.
+                River deltas and their wetlands are drowning as a result of sea level rise and reduced sediment inputs.
+                The Delta-X mission will determine which parts will survive and continue to grow, and which parts will be lost.
+                Delta-X begins with airborne and in situ data acquisition and carries through data analysis, model integration,
+                and validation to predict the extent and spatial patterns of future deltaic land loss or gain.</p>
+            <br>
+            <h1>Interactive Flood Information Map</h1>
+            <img alt="Map of US, click for text equivalent" border="0" src="http://www.weather.gov/images/safety/us_flood.png" usemap="#Map3" width="600">
+            <map id="Map3" name="Map3"><area coords="36,8,35,35,42,43,43,51,54,53,80,54,100,59,109,17,55,2,55,9,53,11" href="https://www.weather.gov/safety/flood-states-wa" shape="poly"> <area coords="32,38,12,78,13,94,81,111,91,86,91,78,102,65,80,55,47,55" href="https://www.weather.gov/safety/flood-states-or" shape="poly"> <area coords="111,17,84,109" href="#" shape="poly"> <area coords="146,130,83,110,110,18,116,18,116,39,126,71,135,90,156,89,150,114" href="https://www.weather.gov/safety/flood-states-id" shape="poly"> <area coords="154,85,144,140,219,152,224,95" href="https://www.weather.gov/safety/flood-states-wy" shape="poly"> <area coords="117,18,231,39,225,96,156,89,133,89,119,48" href="https://www.weather.gov/safety/flood-states-mt" shape="poly"> <area coords="230,37,229,79,302,84,298,42" href="https://www.weather.gov/safety/flood-states-nd" shape="poly"> <area coords="230,81,221,123,300,132,300,86" href="https://www.weather.gov/safety/flood-states-sd" shape="poly"> <area coords="222,126,220,150,239,155,241,166,317,172,300,132" href="https://www.weather.gov/safety/flood-states-ne" shape="poly"> <area coords="297,39,301,121,361,118,341,88,348,71,368,54,337,46,316,40" href="https://www.weather.gov/safety/flood-states-mn" shape="poly"> <area coords="341,101,361,126,391,130,388,83,349,71" href="https://www.weather.gov/safety/flood-states-wi" shape="poly"> <area coords="415,80,406,101,409,117,401,140,428,136,444,135,448,118,444,102,433,83" href="https://www.weather.gov/safety/flood-states-mi" shape="poly"> <area coords="476,124,525,116,545,125,545,98,531,71,513,77,512,98,489,103" href="https://www.weather.gov/safety/flood-states-ny" shape="poly"> <area coords="532,67,546,101,550,97,554,63" href="https://www.weather.gov/safety/flood-states-vt" shape="poly"> <area coords="555,62,551,98,569,92,556,63" href="https://www.weather.gov/safety/flood-states-nh" shape="poly"> <area coords="556,60,570,88,585,64,597,52,580,22,567,24" href="https://www.weather.gov/safety/flood-states-me" shape="poly"> <area coords="11,95,4,117,6,157,19,206,50,242,85,251,90,225,40,149,53,108,8,96" href="https://www.weather.gov/safety/flood-states-ca" shape="poly"> <area coords="55,105,40,146" href="#" shape="poly"> <area coords="55,106" href="#" shape="poly"> <area coords="60,112" href="#" shape="poly"> <area coords="59,113" href="#" shape="poly"> <area coords="106,191,98,190,115,120,53,107,42,150,90,225,90,223,97,199" href="https://www.weather.gov/safety/flood-states-nv" shape="poly"> <area coords="113,123,98,188,157,200,165,146,141,141,146,131,145,130" href="https://www.weather.gov/safety/flood-states-ut" shape="poly"> <area coords="168,146,157,201,238,209,239,158,216,152,169,146" href="https://www.weather.gov/safety/flood-states-co" shape="poly"> <area coords="159,200,225,205,225,280,146,283" href="https://www.weather.gov/safety/flood-states-nm" shape="poly"> <area coords="221,209,225,282,183,277,210,328,224,311,240,318,266,363,289,372,297,344,335,316,330,263,258,253,252,221" href="https://www.weather.gov/safety/flood-states-tx" shape="poly"> <area coords="25,336,75,380" href="https://www.weather.gov/safety/flood-states-hi" shape="rect"> <area coords="225,209,322,213,329,260,258,252,254,222" href="https://www.weather.gov/safety/flood-states-ok" shape="poly"> <area coords="242,168,238,209,322,214,318,173" href="https://www.weather.gov/safety/flood-states-ks" shape="poly"> <area coords="299,121,303,136,315,163,356,160,371,137,357,121" href="https://www.weather.gov/safety/flood-states-ia" shape="poly"> <area coords="317,165,357,160,385,211,371,219,327,221" href="https://www.weather.gov/safety/flood-states-mo" shape="poly"> <area coords="322,221,377,221,369,252,368,268,332,270" href="https://www.weather.gov/safety/flood-states-ar" shape="poly"> <area coords="333,269,370,270,361,298,385,297,393,319,374,326,358,320,338,315" href="https://www.weather.gov/safety/flood-states-la" shape="poly"> <area coords="375,238,399,236,405,301,391,307,384,297,366,296,371,269" href="https://www.weather.gov/safety/flood-states-ms" shape="poly"> <area coords="379,238,446,230,474,210,405,211,378,220" href="https://www.weather.gov/safety/flood-states-tn" shape="poly"> <area coords="363,125,394,132,401,181,385,213,359,161,370,140" href="https://www.weather.gov/safety/flood-states-il" shape="poly"> <area coords="398,144,427,138,431,176,420,192,394,193,402,179" href="https://www.weather.gov/safety/flood-states-in" shape="poly"> <area coords="396,194,387,209,374,220,406,211,450,206,467,193,456,181,432,175,420,190" href="https://www.weather.gov/safety/flood-states-ky" shape="poly"> <area coords="428,139,459,138,473,125,479,158,463,179,433,175" href="https://www.weather.gov/safety/flood-states-oh" shape="poly"> <area coords="401,236,426,231,443,285,413,294,414,305,405,295,402,235" href="https://www.weather.gov/safety/flood-states-al" shape="poly"> <area coords="429,234,447,292,487,287,490,262,456,232" href="https://www.weather.gov/safety/flood-states-ga" shape="poly"> <area coords="460,232,478,223,505,226,521,234,507,256,494,268,473,247" href="https://www.weather.gov/safety/flood-states-sc" shape="poly"> <area coords="398,297,442,287,487,290,519,348,511,368,483,340,474,312,457,303,447,310,434,302" href="https://www.weather.gov/safety/flood-states-fl" shape="poly"> <area coords="444,207,537,195,539,215,523,233,476,226,446,232,472,210" href="https://www.weather.gov/safety/flood-states-nc" shape="poly"> <area coords="466,196,483,190,489,172,503,156,517,167,536,195,455,208" href="https://www.weather.gov/safety/flood-states-va" shape="poly"> <area coords="459,180,470,195,487,188,492,170,506,158,489,158,480,160" href="https://www.weather.gov/safety/flood-states-wv" shape="poly"> <area coords="526,149,527,163,535,177,540,162,534,152" href="https://www.weather.gov/safety/flood-states-de" shape="poly"> <area coords="509,157,523,155,529,179" href="https://www.weather.gov/safety/flood-states-dc" shape="poly"> <area coords="479,157,529,145,525,154,498,158" href="https://www.weather.gov/safety/flood-states-md" shape="poly"> <area coords="473,126,482,156,527,146,536,138,532,121,522,117" href="https://www.weather.gov/safety/flood-states-pa" shape="poly"> <area coords="531,120,535,137,529,148,539,153,547,139,545,126" href="https://www.weather.gov/safety/flood-states-nj" shape="poly"> <area coords="547,107,567,103,560,115,568,101,571,99,570,92,551,98,545,103" href="https://www.weather.gov/safety/flood-states-ma" shape="poly"> <area coords="546,106,546,123,559,118,560,104" href="https://www.weather.gov/safety/flood-states-ct" shape="poly"> <area coords="129,318,142,307,155,303,174,309,192,312,205,373,227,376,254,398,245,403,212,380,185,375,179,382,167,386,161,386,157,394,153,400,139,407,119,414,145,399,149,388,135,386,129,377,122,367,129,358,139,356,140,346,125,348,121,338,129,333,140,340" href="https://www.weather.gov/safety/flood-states-ak" shape="poly"> <area coords="534,384,586,412" href="https://www.weather.gov/safety/flood-states-pr" shape="rect"> <area coords="81,255,147,284,158,203,104,187" href="https://www.weather.gov/safety/flood-states-az" shape="poly"> <area coords="561,115,563,103,576,100,572,113" href="https://www.weather.gov/safety/flood-states-ri" shape="poly"></map>
+        </section>
+        <aside class="map">
+            <h1 class="maptitle">Map of Louisiana</h1>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1272302.967625326!2d-92.55952526969794!3d31.158916348208635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a454b2118265%3A0xc955f73281e54703!2sLouisiana%2C%20USA!5e0!3m2!1sen!2sge!4v1664649086630!5m2!1sen!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </aside>
+    </div>
+    <div class="gamepart">
+
+        <section class="gamesection">
+            <h1 class="game">Animation</h1>
+
+
+
+                <video class="anime" controls>
+                    <source src="{% static 'delta_app/animation.mp4' %}" type="video/mp4">
+                    Video doesn't show up
+                </video>
+
+        </section>
+    </div>
+
+    <footer>
+        <h1 class="about">About us!</h1>
+        <div class="social">
+            <h2 class="soc">Social Media:</h2>
+            <ul>
+                <li>Gega Tvaradze: <a href="https://www.facebook.com/gega.tvaradze.16/"><i class="fa-brands fa-facebook"></i></a></li>
+                <li>Saba Ansiani: <a href="https://www.facebook.com/saba.ansiani.25"><i class="fa-brands fa-facebook"></i></a></li>
+                <li>Nikoloz Carcidze: <a href="https://www.facebook.com/nikoloz.carcidze"><i class="fa-brands fa-facebook"></i></a></li>
+                <li>Erekle Bidzinashvili: <a href="https://www.facebook.com/profile.php?id=100067221534087"><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </div>
+        <div class="videocontainer">
+            <h1 class="videoTitle">Team Video:</h1>
+            <video class="video" controls>
+                <source src="{% static 'delta_app/groupVideo.mp4' %}" type="video/mp4">
+                Video doesn't show up
+            </video>
+        </div>
+
+    </footer>
+{% endblock content %}
+
+
+
+
+

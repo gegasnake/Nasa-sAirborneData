@@ -1,0 +1,196 @@
+body {
+    margin:0;
+    font-size: 13px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+
+}
+
+#nasalogo {
+    width: 100px;
+    height: 100px;
+}
+
+#nasameaning {
+    font-size: 48px;
+}
+
+#datalink {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#descript {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.descriptsection {
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+
+}
+
+section.descsection, section.gamepart {
+  float: left;
+  margin: 2% 4.5%;
+  width: 37%;
+  font-size: 20px;
+}
+
+aside {
+  float: right;
+  margin: 0 1.5%;
+  width: 30%;
+}
+
+.gamesection {
+    text-align: center;
+    width: 90%;
+    height: 400px;
+}
+
+.game {
+    font-size: 60px;
+    margin-left: 140px;
+}
+
+.about{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.gamepart {
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+footer {
+    height: 500px;
+    margin-top: 100px;
+}
+
+.soc {
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+ul{
+    padding-top: 40px;
+    margin-left: 15%;
+}
+
+li{
+  margin: 25px 0;
+}
+
+.icon {
+    margin-left: 10px;
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 50px;
+}
+
+.fa {
+  padding: 17px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 25px;
+  width: 50px;
+}
+
+.link {
+    decoration: none;
+}
+
+.fa {
+    font-size: 40px;
+}
+
+.social {
+    border-right: 6px solid black;
+    height: 500px;
+    position: absolute;
+    padding-left: 10%;
+    width: 50%;
+}
+
+.videoTitle{
+    margin-left: 70%;
+    margin-top: 2%;
+}
+
+iframe {
+    margin-top: 30px;
+}
+
+.map {
+    margin-right: 100px;
+}
+
+.maptitle {
+    text-align: center;
+    padding-left: 40px;
+}
+
+html, body, #map {
+    position: relative;
+    outline: none;
+    height: calc(100% - 48px);
+    width: 100vw;
+}
+
+video {
+    margin-left: 64%;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 400px;
+}
+
+.anime {
+    margin-left: 9%;
+    padiing-bottom: 20px;
+}
+
+.survivecontainer {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 0px;
+
+
+
+}
